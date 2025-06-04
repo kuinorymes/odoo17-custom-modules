@@ -1,0 +1,16 @@
+{
+    'name': 'CRM Lead products',
+    'version': '1.0',
+    'summary': 'Extend CRM Lead module with product adding',
+    'category': 'CRM',
+    'depends': ['crm', 'sale', 'product'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/crm_lead_product_views.xml',
+        'views/crm_lead_product_package.xml',
+        'wizard/crm_lead_add_package_wizard_views.xml'
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False
+}

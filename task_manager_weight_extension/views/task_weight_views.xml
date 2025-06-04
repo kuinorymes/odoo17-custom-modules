@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_task_tree_inherit_weight" model="ir.ui.view">
+        <field name="name">task.tree.inherit.weight</field>
+        <field name="model">task</field>
+        <field name="inherit_id" ref="task_manager.view_task_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='difficulty']" position="after">
+              <field name="weight_kg"/>
+              <field name="weight_ton"/>
+          </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_kanban_inherit_weight" model="ir.ui.view">
+        <field name="name">task.kanban.inherit.weight</field>
+        <field name="model">task</field>
+        <field name="inherit_id" ref="task_manager.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_kanban_secondary']/div[field[@name='difficulty']]" position="after">
+                <div>
+                    <span>Weight (kg): </span>
+                    <field name="weight_kg"/>
+                </div>
+                <div>
+                    <span>Weight (ton): </span>
+                    <field name="weight_ton"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_form_inherit_weight" model="ir.ui.view">
+        <field name="name">task.form.inherit.weight</field>
+        <field name="model">task</field>
+        <field name="inherit_id" ref="task_manager.view_task_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='difficulty']" position="after">
+                <field name="weight_kg"/>
+                <field name="weight_ton"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
