@@ -1,0 +1,23 @@
+<odoo>
+    <record id="helpdesk_create_task_wizard_form" model="ir.ui.view">
+    <field name="name">helpdesk.create.task.wizard.form</field>
+    <field name="model">helpdesk.create.task.wizard</field>
+    <field name="arch" type="xml">
+        <form string="Create Project Task">
+            <group>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="user_ids" widget="many2many_tags"/>
+                <field name="partner_id"/>
+                <field name="tag_ids" widget="many2many_tags"/>
+                <field name="company_id" readonly="1"/>
+                <field name="description"/>
+            </group>
+            <footer>
+                <button string="Create" class="btn-primary" name="create_task" type="object"/>
+                <button string="Cancel" class="btn-secondary" special="cancel"/>
+            </footer>
+        </form>
+    </field>
+</record>
+</odoo>
