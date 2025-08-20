@@ -3,6 +3,8 @@
     'version': '1.0',
     'summary': 'Extend CRM Lead module with product adding',
     'category': 'CRM',
+    "price": 10.0,
+    "currency": "EUR",
     'depends': ['crm', 'sale', 'product'],
     'data': [
         'security/ir.model.access.csv',
