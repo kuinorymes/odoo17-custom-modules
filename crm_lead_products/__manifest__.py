@@ -3,7 +3,7 @@
     'version': '1.0',
     'summary': 'Extend CRM Lead module with product adding',
     'category': 'CRM',
-    'license': 'OPL-1',
+    'license': 'LGPL-3',
     "price": 10.0,
     "currency": "EUR",
     'depends': ['crm', 'sale', 'product'],
