@@ -1,1 +1,148 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>E-Chat Integration (Viber, Telegram, WhatsApp)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: #222;
+      line-height: 1.55;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 28px 0 12px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .hero {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .hero img {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+    }
+    .scr {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 16px 0;
+    }
+    .scr img {
+      width: 100%;
+      display: block;
+    }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+      margin-bottom: 16px;
+    }
+    .small {
+      font-size: 13px;
+      color: #666;
+    }
+    .muted {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <section class="py-3 bg-white">
+    <div class="container">
+      <!-- Overview Section -->
+      <div class="p-md-5 p-3">
+        <div class="hero">
+          <img src="icon.png" alt="E-Chat Integration icon" class="img-fluid">
+          <div>
+            <h1>E-Chat Integration (Viber, Telegram, WhatsApp)</h1>
+            <p class="muted">E-Chat is a platform for integrating Viber, Telegram, and WhatsApp into Odoo.</p>
+          </div>
+        </div>
 
+        <h2>Features</h2>
+        <ul>
+          <li>Automatic lead creation upon the first message</li>
+          <li>Communication history saved in CRM or Discuss</li>
+          <li>Support for incoming/outgoing messages, file attachments, and automatic assignment of conversations</li>
+          <li>Display of name, photo, and channel tags for each contact.</li>
+        </ul>
+        <p>The integration provides centralized management of all connected channels and quick setup via API tokens and webhooks.</p>
+
+        <h2>Module Functionality</h2>
+        <ul>
+          <li>Auto-create a lead upon a new inquiry</li>
+          <li>Chat interface, file sharing, messenger switching, manager reassignment</li>
+          <li>Red indicator for new messages and lead prioritization</li>
+          <li>Channel tags displayed in the lead card</li>
+        </ul>
+        <img src="5.CrmLead.png" class="img-fluid">
+        <img src="6.CrmLead.png" class="img-fluid">
+
+        <ul>
+          <li>All messages in a single channel</li>
+          <li>New messages appear in the chatter, with a contact icon at the bottom.</li>
+        </ul>
+        <img src="7.Discuss.png" class="img-fluid">
+        <img src="8.Discuss.png" class="img-fluid">
+
+        <h2>Configuration</h2>
+        <h3>Connect a Number in E-Chat</h3>
+        <ul>
+          <li>Register an account at <a href="https://e-chat.tech">e-chat.tech</a></li>
+          <li>In your dashboard, add numbers for Viber, Telegram, and WhatsApp, selecting API integration for each messenger.</li>
+        </ul>
+        <img src="1.EchatConfiguration.png" class="img-fluid">
+        <p>Check the connection status under the Integrations menu</p>
+        <img src="2.Echat.ConnectionCheck.png" class="img-fluid">
+
+        <h3>Configuration in Odoo</h3>
+        <ul>
+          <li>Log in as an administrator</li>
+          <li>Ensure the E-Chat Integration module is installed.</li>
+          <li>Go to CRM → Configuration → Social Media and create a connection for each messenger.</li>
+          <li>Fill in the following fields:</li>
+        </ul>
+        <ul>
+          <li>Name</li>
+          <li>Social Media Type</li>
+          <li>Company</li>
+          <li>Store incoming messages in (CRM Lead or Discuss)</li>
+          <li>Sales Team</li>
+          <li>Echat Access Token</li>
+          <li>Connect Number</li>
+        </ul>
+        <img src="3.OdooConfiguration.png" class="img-fluid">
+
+        <h3>Webhooks</h3>
+        <ul>
+          <li>In the created connection, click Connect Channel.</li>
+          <li>Copy the Echat Callback URL.</li>
+          <li>In the E-Chat dashboard → Webhooks, paste the URL for both incoming and sent messages.</li>
+        </ul>
+        <img src="4.WebhookConfiguration.png" class="img-fluid">
+
+        <h2>Testing</h2>
+        <p>Send a message from a connected messenger and check its delivery in Odoo → CRM Lead or Discuss.</p>
+        <p>The module provides a centralized messenger integration with Odoo, automated lead creation, and efficient message distribution.</p>
+        <p>For implementation and support, please contact the Netframe team via <a href="mailto:odoo@netframe.org">odoo@netframe.org</a>.</p>
+
+        <h2>Support</h2>
+        <p>Author: Netframe</p>
+        <p>Email: <a href="mailto:odoo@netframe.org">odoo@netframe.org</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
