@@ -14,8 +14,8 @@
         'wizard/crm_lead_add_package_wizard_views.xml'
     ],
     'images': [
-        'static/description/icon.png',
         'static/description/banner.png',
+        'static/description/icon.png',
     ],
     'installable': True,
     'application': False,
