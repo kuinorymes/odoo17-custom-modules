@@ -13,6 +13,10 @@
         'views/crm_lead_product_package.xml',
         'wizard/crm_lead_add_package_wizard_views.xml'
     ],
+    'images': [
+        'static/description/icon.png',
+        'static/description/banner.png,
+    ],
     'installable': True,
     'application': False,
     'auto_install': False
