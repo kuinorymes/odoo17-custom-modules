@@ -1,1 +1,257 @@
-none
+<section class="container mb-4" style="font-family: sans-serif; color: black;">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <a href="#configuration" class="mx-3 font-weight-bold" style="font-size: 17px; text-decoration: none;">Configuration</a>
+      <a href="#support" class="mx-3 font-weight-bold" style="font-size: 17px; text-decoration: none;">Support</a>
+    </div>
+  </div>
+</section>
+
+<section class="container bg-light py-4 rounded shadow" style="font-family: sans-serif; color: black;">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <h2 class="display-4 font-weight-bold text-primary mb-4">
+        NetFrame Sync Ukrsibbank
+      </h2>
+      <div class="col-lg-8 mx-auto">
+        <p class="lead" style="font-size: 20px;">
+          NetFrame Sync Ukrsibbank provides seamless integration between Odoo and Ukrsibbank for automated online bank
+          statement synchronization and Payment creation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4" style="font-family: sans-serif; color: black;">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="h1 font-weight-bold text-primary mb-4 text-center">Key Features</h2>
+      <ul class="list-group list-group-flush mx-auto" style="font-size: 17px; max-width: 800px;">
+        <li class="list-group-item">Automatic fetching of online bank statements from Ukrsibbank</li>
+        <li class="list-group-item">Pull statements for custom date ranges on demand</li>
+        <li class="list-group-item">Scheduled statement synchronization</li>
+        <li class="list-group-item">Creating payments from Odoo</li>
+        <li class="list-group-item">Secure connection with OAuth 2.0 & JWT</li>
+        <li class="list-group-item">All requests signed with RSA private key</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container bg-light py-4 rounded shadow" style="font-family: sans-serif; color: black;">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="h1 font-weight-bold text-primary mb-4 text-center" id="pull-statements">Online Bank Statements
+        Pulling</h2>
+      <p class="text-center lead" style="font-size: 20px;">Choose a custom date range to pull statements & click
+        <b>Pull</b></p>
+      <span class="d-block text-center display-4 mb-3">&#8595;</span>
+      <img class="img-fluid rounded mx-auto d-block" src="01.demo.png" style="width: 80%; border: 1px solid lightgrey;">
+      <p class="text-center lead mt-4" style="font-size: 20px;">You will be redirected to the retrieved statements</p>
+      <span class="d-block text-center display-4 mb-3">&#8595;</span>
+      <img class="img-fluid rounded mx-auto d-block" src="02.demo.png" style="width: 80%; border: 1px solid lightgrey;">
+      <img class="img-fluid rounded mx-auto d-block mt-3" src="03.demo.png"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <p class="text-center lead mt-4" style="font-size: 20px;">Configure a scheduled pull to not miss any statement</p>
+      <span class="d-block text-center display-4 mb-3">&#8595;</span>
+      <img class="img-fluid rounded mx-auto d-block" src="demo.scheduled.png"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <h2 class="h1 font-weight-bold text-primary mt-5 mb-4 text-center" id="payment-creation">Creating a Payment</h2>
+      <h3 class="text-center text-warning font-weight-bold" style="font-size: 17px;">&#9888; To create payments, you
+        first need to specify the payment details for the Contacts to which the payment will be created. <br/>You can do
+        this in the contact card. For more details see <a href="#payment-creation-config"> Payment Creation</a> in
+        configuration section</h3>
+      <p class="text-center lead" style="font-size: 20px;">Go to Accounting &#8594; Vendors &#8594; Bills.<br/>
+        Choose an unpaid Bill &#8594; click Register Payment:
+      </p>
+      <img class="img-fluid rounded mx-auto d-block" src="demo.payment.register.png"
+           alt="Online Bank Statement Provider List" style="width: 88%; border: 1px solid lightgrey;">
+      <p class="text-center lead mt-4" style="font-size: 20px;">Create a New Payment</p>
+      <ol class="list-group list-group-flush mx-auto" style="font-size: 17px; max-width: 800px;">
+        <li class="list-group-item d-flex justify-content-between">
+          Choose a Journal with activated Bank Feed as OCA and provider as Ukrsibbank
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Choose Ukrsib Online payments as a Payment Method
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Payment Purpose will be auto populted from payment purpose field of the chosen Vendor
+          <span class="badge badge-primary badge-pill">3</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          If Schedule payment marked - payment will be made on the date specified in field Payment value date
+          <span class="badge badge-primary badge-pill">4</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Memo will be auto populated.
+          <span class="badge badge-primary badge-pill">5</span>
+        </li>
+        <img class="img-fluid rounded mx-auto d-block mt-3" src="04.demo.png" alt="Online Bank Statement Provider List"
+             style="width: 100%; border: 1px solid lightgrey;">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          After this click Create payment button. The new payment document will be created in Ukrsibbank and payment
+          will also be created in Odoo:
+          <span class="badge badge-primary badge-pill">6</span>
+        </li>
+        <img class="img-fluid rounded mx-auto d-block mt-3" src="05.demo.png" alt="Online Bank Statement Provider List"
+             style="width: 100%; border: 1px solid lightgrey;">
+      </ol>
+      <h3 class="text-center font-weight-bold text-primary mt-5" style="font-size: 22px;">
+        For implementation and support, contact the <a href="mailto:odoo@netframe.org"><b>Netframe team</b></a>
+      </h3>
+      <h4 class="text-center mt-3" style="font-size: 17px;">For a detailed description of Settings, see the <a
+          href="#configuration" style="font-size: 17px; font-weight: bold; text-decoration: none;">Configuration</a>
+        section.</h4>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4" id="configuration" style="font-family: sans-serif; color: black;">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="h1 font-weight-bold text-primary mb-4 text-center">Configuration</h2>
+    </div>
+    <div class="col-12 bg-light p-4 rounded shadow">
+      <h3 class="text-center h2 font-weight-bold text-primary mb-4">
+        Getting Started</h3>
+      <p class="text-center lead mb-4" style="font-size: 18px;">
+        To start pulling online bank statements, configure the following in Odoo. First, go to the <b>Accounting app</b><br/>
+        Create a new <b>Journal</b> of type Bank:
+      </p>
+      <ul class="list-group list-group-flush mx-auto mb-4" style="font-size: 17px; max-width: 800px;">
+        <li class="list-group-item d-flex justify-content-between">
+          In field Account Number insert IBAN of an Account
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Set Bank Feeds to "Online (OCA)
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          In section Accounting Information specify a required Currency
+          <span class="badge badge-primary badge-pill">3</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          In section Online Bank Statements (OCA) choose Ukrsibbank as Provider
+          <span class="badge badge-primary badge-pill">4</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Save changes
+          <span class="badge badge-primary badge-pill">5</span>
+        </li>
+      </ul>
+      <img class="img-fluid rounded mx-auto d-block mb-4" src="01.%20config.png"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <p class="text-center lead" style="font-size: 20px;">After clicking <b>SAVE</b> an <b>Online Bank Statement Provider</b> will be automatically
+        created for your Journal. Now we need to configure it. Go to <b>Settings</b> &#8594; <b>Banks</b> &#8594; <b>Online
+          Bank Statement Provider</b>:</p>
+      <img class="img-fluid rounded mx-auto d-block mb-4" src="02.config.png" alt="Online Bank Statement Provider Menu"
+           style="width: 100%; border: 1px solid lightgrey;">
+      <p class="text-center lead" style="font-size: 20px;">Select the record named after your Journal ("Ukrsibbank", in our case):</p>
+      <ol class="list-group list-group-flush mx-auto mb-4" style="font-size: 17px; max-width: 800px;">
+        <li class="list-group-item d-flex justify-content-between">
+          Scheduled update interval. Interval used for scheduled pull. If 1 day was specified - Odoo will connect
+          and try to obtain bank statements once a day.
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Client ID & Client Secret. Credentials, received from bank after submitting public part of RSA key.
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Statement Creation Mode. Frequency of statement pulls:<br/>
+          <ul class="list-unstyled pl-4">
+            <li class="d-flex justify-content-between">Daily statements</li>
+            <li class="d-flex justify-content-between">Weekly statements</li>
+            <li class="d-flex justify-content-between">Monthly statements</li>
+          </ul>
+          <span class="badge badge-primary badge-pill">3</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Allow Empty Statements. If checked - will create empty bank statements if during integration with bank
+          API no statements were found for specified date. Otherwise - will only create statements for days when there
+          were actual transactions
+          <span class="badge badge-primary badge-pill">4</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          RSA Key (Private part). Field to upload RSA Key (Private part)
+          <span class="badge badge-primary badge-pill">5</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          With Passphrase. Field for passphrase to decode RSA key (private part)
+          <span class="badge badge-primary badge-pill">6</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          After everything is filled click save
+          <span class="badge badge-primary badge-pill">7</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          After saving changes click Connect
+          <span class="badge badge-primary badge-pill">8</span>
+        </li>
+      </ol>
+      <img class="img-fluid rounded mx-auto d-block mb-4" src="03.config.png" alt="Online Bank Statement Provider List"
+           style="width: 88%; border: 1px solid lightgrey;">
+      <p class="text-center lead" style="font-size: 20px;">After <b>Connect</b> button pressed You will be redirected to <b>Ukrsib business. Here You
+        need to login with existing user credentials</b></p>
+      <img class="img-fluid rounded mx-auto d-block mb-4" src="04.config.png" alt="Online Bank Statement Provider Form"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <p class="text-center lead" style="font-size: 20px;">
+        Connection in Odoo will change it's status to <b>Connected</b><br/>
+        Upon successful connection You will be redirected to the following page with status <b>OK</b>:
+      </p>
+      <img class="img-fluid rounded mx-auto d-block mb-4" src="05.config.png" alt="Token inserted"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <p class="text-center lead" style="font-size: 20px;">Close the tab, go back to Odoo and refresh the page. Connection status will change to <b>Token
+        Obtained</b>. This means active connection with Ukrsibbank is established<br/>
+        Now we can try to <a href="#pull-statements">pull statements</a> from connected Bank Account</p>
+      <h3 class="text-center h2 font-weight-bold text-primary mt-5 mb-4" id="payment-creation-config">
+        Payment Creation
+      </h3>
+      <p class="text-center lead mb-4" style="font-size: 20px;">For payment document to be created in Ukrsib Bank the
+        following fields should be filled for the vendor:</p>
+      <ol class="list-group list-group-flush mx-auto mb-4" style="font-size: 17px; max-width: 800px;">
+        <li class="list-group-item d-flex justify-content-between">
+          In a Contact card specify contact's Name. Use official company name
+          <span class="badge badge-primary badge-pill">1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Tax ID: VAT number; EDRPOU for companies and INN for private entrepreneurs
+          (PE)
+          <span class="badge badge-primary badge-pill">2</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Contact number/Номер контракту: for PE only
+          <span class="badge badge-primary badge-pill">3</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Bank account: valid IBAN used for transactions with vendor
+          <span class="badge badge-primary badge-pill">4</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Payment purpose: auto filled field which uses Contact number field and
+          predefined value; can be changed
+          <span class="badge badge-primary badge-pill">5</span>
+        </li>
+      </ol>
+      <img class="img-fluid rounded mx-auto d-block mt-4 mb-4" src="06.config.png"
+           style="width: 80%; border: 1px solid lightgrey;">
+      <h4 class="text-center mt-3" style="font-size: 17px;">After these steps, return to the <a href="#payment-creation"
+                                                                       style="font-size: 17px; font-weight: bold; text-decoration: none;">Payment
+        Creation</a> section</h4>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4 bg-light rounded shadow" id="support" style="font-family: sans-serif; color: black;">
+  <div class="row justify-content-center">
+    <div class="col-12 text-center">
+      <h2 class="h1 font-weight-bold text-primary mb-4">Support</h2>
+      <p class="lead" style="font-size: 20px;">Author: <strong><a href="https://www.netframe.org/">Netframe</a></strong></p>
+      <p class="lead" style="font-size: 20px;">Email: <a href="mailto:odoo@netframe.org">odoo@netframe.org</a></p>
+    </div>
+  </div>
+</section>
