@@ -244,6 +244,83 @@
 </section>
 
 <!-- ============================================================ -->
+<!-- FAQ -->
+<!-- ============================================================ -->
+<section class="oe_container oe_dark" id="faq">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12 text-center">
+      <h2 class="oe_slogan" style="font-size:28px; font-weight:700; color:#333;">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="oe_span6" style="padding:10px;">
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          How many Telegram accounts can be connected?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          Currently <strong>one account per Odoo database</strong>. Multi-account support is planned for future releases.
+        </p>
+      </div>
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          Does it work with Telegram bots?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          No. This module connects a <strong>real Telegram account</strong> (phone number), not a bot token.
+          This allows receiving messages from any user, including private chats. For connecting Telegram Bots please check out out Telegram Bot Integration module.
+        </p>
+      </div>
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          Is Two-Factor Authentication (2FA) supported?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          Yes. Both <strong>QR code</strong> and <strong>Phone + SMS</strong> login methods handle
+          accounts with 2FA enabled — you will be prompted for your cloud password during login.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="oe_span6" style="padding:10px;">
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          Will messages sent from my phone appear in Odoo?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          Yes. <strong>All messages are synced</strong> — both messages received from customers and
+          messages you send from the Telegram phone or desktop app appear in the Odoo chatter.
+        </p>
+      </div>
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          What happens if the Odoo server restarts?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          The connection <strong>resumes automatically</strong>. The session is stored in the database,
+          so no re-login is needed after a server restart.
+        </p>
+      </div>
+
+      <div style="background:#fff; border-radius:8px; padding:22px 25px; margin-bottom:15px; border:1px solid #e8e8e8;">
+        <h4 style="font-weight:700; color:#333; margin-bottom:8px; font-size:15px;">
+          Which Odoo versions are supported?
+        </h4>
+        <p style="color:#666; line-height:1.5; margin:0;">
+          The module currently supports <strong>Odoo 17, Odoo 18, Odoo19</strong>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
 <!-- Support -->
 <!-- ============================================================ -->
 <section class="oe_container oe_dark" id="support">
